@@ -1,0 +1,150 @@
+PS C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア>mkdir git_challenge
+    ディレクトリ:
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア
+
+d-----        2024/05/11     14:40                git_challenge
+
+
+PS C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア>
+cd .\git_challenge\
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git init
+Initialized empty Git repository in
+C:/Users/ttoh1/iCloudDrive/work/15.繝・・繧ｿ繧ｵ繧､繧ｨ繝ｳ繧ｹ/04.貍皮ｿ・萓阪お繝ｳ繧ｸ繝九い/git_challenge/.git/
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>touch hello_world.txt
+touch : 用語 'touch' は、コマンドレット、関数、スクリプト
+ファイル、または操作可能なプログラムの名前として認識されません。名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しい 
+ことを確認してから、再試行してください。
+発生場所 行:1 文字:1
++ touch hello_world.txt
++ ~~~~~
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>echo hello_world >> hello_world.txt
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>ls
+
+    ディレクトリ:
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---l        2024/05/11     14:42             28 hello_world.txt
+
+
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>cat .\hello_world.txt
+hello_world
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>vim .\hello_world.txt
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>cat .\hello_world.txt
+Hello,world!
+こんにちは、世界！
+
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>cat .\hello_world.txt
+Hello,world!
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git add .
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git diff
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git diff --staged
+index 0000000..8cbbd12
+Binary files /dev/null and b/.hello_world.txt.un~ differ
+diff --git a/hello_world 2.txt~ b/hello_world 2.txt~
+Binary files /dev/null and b/hello_world 2.txt~ differ
+diff --git a/hello_world.txt b/hello_world.txt
+new file mode 100644
+index 0000000..740968d
+Binary files /dev/null and b/hello_world.txt differ
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git commit -m "hello_worldを作成"
+[main (root-commit) b475e96] hello_world繧剃ｽ懈・
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .hello_world.txt.un~
+ create mode 100644 hello_world 2.txt~
+ create mode 100644 hello_world.txt
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git status
+On branch main
+nothing to commit, working tree clean
+
+
+
+
+----                 -------------         ------ ----
+-a---l        2024/05/11     14:43           1826 .hello_world.txt.un~
+-a---l        2024/05/11     14:43             56 hello_world 2.txt~
+-a---l        2024/05/11     14:43             34 hello_world.txt
+
+
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>cat .\hello_world.txt     
+Hello,world!
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>cat '.\hello_world 2.txt~'
+Hello,world!
+こんにちは、世界！
+
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>vim .\hello_world.txt     
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>cat .\hello_world.txt     
+Hello,world!
+こんにちは、世界！
+
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git add .\hello_world.txt     
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git status
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello_world.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .hello_world.txt.un~
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello_world.txt~
+
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git commit -m "日本語コメントを追加"
+[main acef841] 譌･譛ｬ隱槭さ繝｡繝ｳ繝医ｒ霑ｽ蜉160
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git log --oneline
+acef841 (HEAD -> main) 日本語コメントを追加
+b475e96 hello_worldを作成
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>less .\hello_world.txt     
+less : 用語 'less' は、コマンドレット、関数、スクリプト
+ファイル、または操作可能なプログラムの名前として認識されません。名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいこ 
+とを確認してから、再試行してください。
+発生場所 行:1 文字:1
++ less .\hello_world.txt
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (less:String) [],
+CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS
+C:\Users\ttoh1\iCloudDrive\work\15.データサイエンス\04.演習\侍エンジニア\git_challenge>git log
+commit acef8419fc8362ec7d6bd27b4924094a9f1422db (HEAD -> main)
+Author: toh1215 <toh.1215@gmail.com>
+Date:   Sat May 11 14:48:20 2024 +0900
+
+    日本語コメントを追加
+
+commit b475e9641e071934485ff2c952180d1ad1bfd114
+Author: toh1215 <toh.1215@gmail.com>
+Date:   Sat May 11 14:45:42 2024 +0900
+
+    hello_worldを作成
+
+
